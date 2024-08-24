@@ -1,0 +1,62 @@
+###ATTEMPT##0~
+RESPONSE##
+Let's analyze the possible outcomes in this game:
+
+1. **Both choose R (R, R)**: Both get \$0.
+2. **I choose R, they choose B (R, B)**: I get \$5, they get \$1.
+3. **I choose B, they choose R (B, R)**: I get \$1, they get \$5.
+4. **Both choose B (B, B)**: Both get \$3.
+
+To decide the best move, let's consider the strategies:
+
+1. **Choosing R**:
+   - If the other player chooses R, I get \$0.
+   - If the other player chooses B, I get \$5.
+
+2. **Choosing B**:
+   - If the other player chooses R, I get \$1.
+   - If the other player chooses B, I get \$3.
+
+Given these options, let's consider both players trying to maximize their payoff rationally:
+
+If I pick **R**:
+  - Best outcome: \$.5 (if they choose B)
+  - Worst outcome: \$0 (if they choose R)
+
+If I pick **B**:
+  - Best outcome: \$3 (if they choose B)
+  - Worst outcome: \$1 (if they choose R)
+
+From a rational perspective, the payoff for both players choosing B is higher than taking the risk of going with R hoping the other chooses differently to get the highest payoff from asymmetric choices (5,1 or 1,5). Thus, aiming for a mutual benefit where both pick B may be a safer and more reasonable option since it guarantees at least a middle ground payoff rather than risking a zero payoff.
+
+Thinking as a rational human player and aiming to maximize my guaranteed payoff, my choice is:
+
+**B**
+
+Therefore, my choice is:
+
+**{B}**~
+
+PREDICATES##
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 5), do(choice(them, 'B'), do(choice(you, 'R'), s0))).
+finally(goal(you, 3), do(choice(them, 'B'), do(choice(you, 'B'), s0))).
+highest_possible_individual_payoff(5).
+highest_guaranteed_payoff_choice('B').
+lowest_possible_individual_payoff(0).
+lowest_individual_payoff_for_choice(1, 'B').
+finally(goal(them, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+highest_individual_payoff_for_choice(3, 'B').
+finally(goal(you, 0), do(choice(them, 'R'), do(choice(you, 'R'), s0))).
+finally(goal(them, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(them, 5), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+highest_mutual_payoff('B', 'B').
+finally(goal(you, 1), do(choice(them, 'R'), do(choice(you, 'B'), s0))).
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

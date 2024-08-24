@@ -1,0 +1,14 @@
+###ATTEMPT##0~
+RESPONSE##
+If I choose R, I can get 0$ if the other player also chooses R. However, if the other player chooses B, I get 5$. If I choose B, I can get 3$ if the other player also chooses B. However, if the other player chooses R, I only get 1$. Therefore, my best choice is to choose B. {B}~
+
+PREDICATES##
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

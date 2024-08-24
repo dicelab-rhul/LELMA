@@ -1,0 +1,22 @@
+###ATTEMPT##0~
+RESPONSE##
+As a human player, I would reason as follows:
+
+If I choose R, I get 0$ if they choose R and 5$ if they choose B. If I choose B, I get 3$ if they choose B and 1$ if they choose R.
+
+Therefore, I should choose **B** because it guarantees me a minimum of 1$ and a maximum of 3$, while choosing R could result in 0$. {B}~
+
+PREDICATES##
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+lowest_individual_payoff_for_choice(1, 'B').
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+lowest_individual_payoff_for_choice(0, 'R').
+highest_individual_payoff_for_choice(5, 'R').
+highest_individual_payoff_for_choice(3, 'B').
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

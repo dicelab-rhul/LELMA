@@ -1,0 +1,36 @@
+###ATTEMPT##0~
+RESPONSE##
+As a human player, I would consider the possible outcomes of the game and make a decision that maximizes my expected payoff.
+
+If I choose R, there are two possible outcomes:
+
+1. The other player also chooses R, and we both get 1$.
+2. The other player chooses B, and I get 5$ while they get 0$.
+
+If I choose B, there are also two possible outcomes:
+
+1. The other player also chooses B, and we both get 3$.
+2. The other player chooses R, and I get 0$ while they get 5$.
+
+Based on these possible outcomes, I would calculate the expected payoff for each choice:
+
+**Expected payoff for choosing R** = (1 * 0.5) + (5 * 0.5) = 3$
+
+**Expected payoff for choosing B** = (3 * 0.5) + (0 * 0.5) = 1.5$
+
+Since the expected payoff for choosing R is higher than the expected payoff for choosing B, I would **choose R**. {R}~
+
+PREDICATES##
+finally(goal(them, 5), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 0), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+highest_guaranteed_payoff_choice('R').
+finally(goal(them, 0), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(them, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

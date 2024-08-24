@@ -1,0 +1,13 @@
+###ATTEMPT##0~
+RESPONSE##
+In this game, the choice B is a *strictly dominated strategy* as it yields a lower payoff than R in all scenarios. So a rational player would never pick B. 
+
+Therefore, I would choose R. {R}~
+
+PREDICATES##
+lower_guaranteed_payoff('B', 'R').
+highest_guaranteed_payoff_choice('R').~
+
+FAILED QUERIES##
+~
+

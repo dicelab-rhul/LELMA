@@ -1,0 +1,15 @@
+###ATTEMPT##0~
+RESPONSE##
+If I choose R, I will get 5$ if the other player chooses B and 1$ if they choose R. If I choose B, I will get 3$ if the other player chooses B and 0$ if they choose R. Thus, my best choice is R, because it guarantees me at least 1$ and has a chance to get me 5$. {R}~
+
+PREDICATES##
+finally(goal(you, 0), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+highest_guaranteed_payoff_choice('R').
+higher_guaranteed_payoff('R', 'B').
+finally(goal(you, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

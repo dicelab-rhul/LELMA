@@ -1,0 +1,20 @@
+###ATTEMPT##0~
+RESPONSE##
+In this one-shot prisoner's dilemma, the optimal choice is to choose B {B}.
+
+If I choose R, I risk getting 0$ if the other player also chooses R. Even if they choose B, I only get 5$, while they get 1$. On the other hand, if I choose B, I am guaranteed to get at least 1$ if they choose R. If they also choose B, we both get 3$.
+
+Therefore, it is in my best interest to choose B, regardless of what the other player chooses.~
+
+PREDICATES##
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+lowest_individual_payoff_for_choice(1, 'B').
+lowest_individual_payoff_for_choice(0, 'R').
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(them, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

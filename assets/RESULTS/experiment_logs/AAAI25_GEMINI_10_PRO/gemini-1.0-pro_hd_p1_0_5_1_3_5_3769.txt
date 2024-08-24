@@ -1,0 +1,21 @@
+###ATTEMPT##0~
+RESPONSE##
+In this game, the best choice for me is **B** because it guarantees me a payoff of at least 1$, regardless of what the other player chooses.
+
+If I choose R and the other player chooses B, I get a payoff of 5$. However, if the other player also chooses R, I get a payoff of 0$.
+
+If I choose B and the other player chooses R, I get a payoff of 1$. However, if the other player also chooses B, I get a payoff of 3$.
+
+Therefore, choosing B ensures that I get a higher payoff than if I choose R, regardless of the other player's choice. {B}~
+
+PREDICATES##
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+lower_guaranteed_payoff('R', 'B').
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

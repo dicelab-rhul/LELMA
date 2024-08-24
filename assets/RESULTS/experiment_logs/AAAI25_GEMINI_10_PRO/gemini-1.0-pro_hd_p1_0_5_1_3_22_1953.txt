@@ -1,0 +1,21 @@
+###ATTEMPT##0~
+RESPONSE##
+As a rational player, I would choose the option that maximizes my expected payoff.
+
+If I choose R, my payoff is 0 if the other player also chooses R, and 5 if they choose B. The probability of the other player choosing B is unknown, but let's assume it's 50%. In that case, my expected payoff for choosing R is (0 x 50%) + (5 x 50%) = 2.5.
+
+On the other hand, if I choose B, my payoff is 3 if the other player also chooses B, and 1 if they choose R. The expected payoff for choosing B is (3 x 50%) + (1 x 50%) = 2.
+
+Therefore, I would choose **B** because it has a slightly higher expected payoff than R. {B}~
+
+PREDICATES##
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+higher_guaranteed_payoff('B', 'R').
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

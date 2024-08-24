@@ -1,0 +1,14 @@
+###ATTEMPT##0~
+RESPONSE##
+In this single-round game, choosing R appears to be the best strategy. If my opponent chooses R, we both earn a decent payoff of $1. However, if my opponent chooses B, I earn a much higher payoff of $5. While it's true that I could earn $0 if my opponent chooses R and I choose B, the potential payoff of $5 for choosing R when they choose B outweighs this risk. Therefore, I choose R to maximize my expected payoff. {R}~
+
+PREDICATES##
+finally(goal(you, 0), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+highest_guaranteed_payoff_choice('R').
+finally(goal(you, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

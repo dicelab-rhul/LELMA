@@ -1,0 +1,25 @@
+###ATTEMPT##0~
+RESPONSE##
+In a single round game, I would choose **B** {B}. Here's my reasoning:
+
+If I choose **R**, I will earn $0 if the other player picks **R**, $5 if the other chooses **B**. However, if I choose **B**, the payoffs are higher. 
+
+If they choose **R**, I get $1, while they get $5. If they also choose **B**, I get $3, while they also get $3.
+
+The only situation where choosing **R** gives me a higher payoff is when the other player chooses **B**. But since both choices are equally likely, and **B** gives a higher payoff in two out of three scenarios, choosing **B** is the better strategy.~
+
+PREDICATES##
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+higher(5, 1).
+finally(goal(them, 5), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(them, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+highest_individual_payoff_for_choice(5, 'R').
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+higher(5, 0).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

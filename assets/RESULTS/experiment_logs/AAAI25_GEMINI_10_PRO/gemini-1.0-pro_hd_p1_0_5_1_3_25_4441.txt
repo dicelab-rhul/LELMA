@@ -1,0 +1,22 @@
+###ATTEMPT##0~
+RESPONSE##
+In this one-shot game, the best choice for me is to pick **B** because it guarantees me a payoff of at least 1$ regardless of what the other player chooses.
+
+If the other player also picks B, we both get 3$, which is a better outcome than getting 0$.
+
+If the other player picks R, I get 1$, which is still better than getting 0$ if I had picked R myself.
+
+Therefore, choosing B is the rational choice in this game. {B}~
+
+PREDICATES##
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+higher_guaranteed_payoff('B', 'R').
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+higher(1, 0).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+finally(goal(them, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

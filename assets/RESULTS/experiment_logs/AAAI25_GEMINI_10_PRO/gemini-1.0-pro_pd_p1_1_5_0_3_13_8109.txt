@@ -1,0 +1,21 @@
+###ATTEMPT##0~
+RESPONSE##
+I would choose **R**.
+
+This choice maximizes my expected payoff. Let's analyze the possible outcomes:
+
+* If the other player chooses R, I get 1$, which is the highest possible payoff.
+* If the other player chooses B, I get 5$, which is also a higher payoff than choosing B myself.
+
+Choosing B would only result in an expected payoff of 3$, which is both lower than choosing R and risky since it depends on the other player also choosing B.
+
+Therefore, I believe choosing **R** gives me the best chance of maximizing my payoff. {R}~
+
+PREDICATES##
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

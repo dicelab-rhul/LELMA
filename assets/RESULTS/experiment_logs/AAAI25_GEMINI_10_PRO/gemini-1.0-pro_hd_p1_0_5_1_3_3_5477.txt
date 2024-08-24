@@ -1,0 +1,25 @@
+###ATTEMPT##0~
+RESPONSE##
+In this one-round game, the best choice is to pick B.
+
+If I pick R, my payoff depends on the other player's choice. If they also pick R, we both get 0$, which is not a desirable outcome. If they pick B, I get 5$, but they get 1$. This is a good outcome for me, but not the best.
+
+On the other hand, if I pick B, my payoff is also dependent on the other player's choice. If they pick R, I get 1$, which is not as good as getting 5$, but it's still better than getting 0$. If they also pick B, we both get 3$, which is a better outcome than getting 0$ or 1$.
+
+Therefore, the best choice for me is to pick B, regardless of what the other player chooses. {B}~
+
+PREDICATES##
+lower(5, 10).
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+higher(3, 0).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+higher(1, 0).
+higher(3, 1).
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+highest_guaranteed_payoff_choice('B').~
+
+FAILED QUERIES##
+~
+

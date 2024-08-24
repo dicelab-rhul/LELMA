@@ -1,0 +1,24 @@
+###ATTEMPT##0~
+RESPONSE##
+As a human player, I would reason as follows:
+
+If I choose R, the payoff depends on what the other player chooses. If they also choose R, we both get 1$. If they choose B, I get 3$. So, choosing R guarantees me a payoff of at least 1$.
+
+On the other hand, if I choose B, the payoff again depends on what the other player chooses. If they choose R, I get 0$. If they choose B, I get 5$. So, choosing B gives me a chance at a higher payoff of 5$, but it also comes with the risk of getting 0$.
+
+Based on this reasoning, I would choose **R** because it guarantees me a payoff of at least 1$, while choosing B carries the risk of getting 0$. {R}~
+
+PREDICATES##
+finally(goal(you, 5), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 0), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 3), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+lowest_individual_payoff_for_choice(0, 'B').
+highest_guaranteed_payoff_choice('R').
+higher_guaranteed_payoff('R', 'B').
+highest_individual_payoff_for_choice(5, 'B').
+finally(goal(you, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

@@ -1,0 +1,13 @@
+###ATTEMPT##0~
+RESPONSE##
+In this game, the payoff for choosing R is 3$ if the other player chooses B and 1$ if they choose R. The payoff for choosing B is 5$ if the other player also chooses B and 0$ if they choose R.
+
+Choosing R is a dominant strategy for me because it gives me a higher payoff than choosing B, regardless of what the other player chooses. Therefore, my choice is R. {R}~
+
+PREDICATES##
+highest_guaranteed_payoff_choice('R').
+higher_guaranteed_payoff('R', 'B').~
+
+FAILED QUERIES##
+~
+

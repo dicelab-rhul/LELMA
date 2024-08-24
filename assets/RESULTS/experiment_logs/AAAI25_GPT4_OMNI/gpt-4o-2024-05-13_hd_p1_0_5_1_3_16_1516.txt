@@ -1,0 +1,61 @@
+###ATTEMPT##0~
+RESPONSE##
+Let's break down the payoff matrix for the game:
+
+1. If both players choose R:
+    - Both get 0$.
+
+2. If I choose R and the other player chooses B:
+    - I get 5$, the other player gets 1$.
+
+3. If I choose B and the other player chooses R:
+    - I get 1$, the other player gets 5$.
+
+4. If both players choose B:
+    - Both get 3$.
+
+To decide my choice, I need to consider the possible strategies of the other player and the outcomes of my own choice. Let's analyze each option from my perspective:
+
+- **Choosing R:**
+    - If the other player chooses R, I get 0$.
+    - If the other player chooses B, I get 5$.
+
+- **Choosing B:**
+    - If the other player chooses R, I get 1$.
+    - If the other player chooses B, I get 3$.
+
+Now, I factor in the potential logic of the other player, who is also trying to maximize their own payoff.
+
+The payoff matrix can be simplified into pairs:
+- (R, R) --> (0, 0)
+- (R, B) --> (5, 1)
+- (B, R) --> (1, 5)
+- (B, B) --> (3, 3)
+
+If I consider my payoff drops to 0$ if both choose R, it's a very low incentive to pick R unless I'm confident the other player will choose B. 
+
+On the other hand:
+- If I choose B and the other player chooses R, I get 1$, which is better than 0$.
+- If we both choose B, we both get 3$, which is a relatively fair outcome and quite decent.
+
+Given the nature of anonymous players, the rational decision would be to place trust in mutual benefit (as often found in game theory) to avoid the worst-case scenario (0$).
+
+Therefore, in the interest of achieving a safe and beneficial outcome for both players, I choose B. This way, we both aim for 3$, avoiding the worst-case scenario of getting nothing. Even without trust, choosing B ensures at least 1$ if the other isn't aligned.
+
+**My choice: {B}**~
+
+PREDICATES##
+finally(goal(them, 1), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(you, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+highest_possible_individual_payoff(5).
+lowest_possible_individual_payoff(0).
+finally(goal(them, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+finally(goal(you, 0), do(choice(you, 'R'), do(choice(them, 'R'), s0))).
+finally(goal(you, 5), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+finally(goal(them, 3), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(them, 5), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 1), do(choice(you, 'B'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+

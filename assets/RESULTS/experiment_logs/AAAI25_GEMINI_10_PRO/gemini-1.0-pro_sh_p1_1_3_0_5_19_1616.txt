@@ -1,0 +1,20 @@
+###ATTEMPT##0~
+RESPONSE##
+If I choose R, I get 1$ if the other player chooses R, but **3$** if they choose B. 
+
+If I choose B, I get 0$ if the other player chooses R, but **5$** if they choose B.
+
+There's no way of knowing what the other player will choose, but since there's a chance of getting **3$** if I choose R, that's my best choice.
+
+{R}~
+
+PREDICATES##
+finally(goal(you, 5), do(choice(you, 'B'), do(choice(them, 'B'), s0))).
+finally(goal(you, 0), do(choice(you, 'B'), do(choice(them, 'R'), s0))).
+finally(goal(you, 3), do(choice(you, 'R'), do(choice(them, 'B'), s0))).
+highest_guaranteed_payoff_choice('R').
+finally(goal(you, 1), do(choice(you, 'R'), do(choice(them, 'R'), s0))).~
+
+FAILED QUERIES##
+~
+
