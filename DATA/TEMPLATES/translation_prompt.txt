@@ -1,0 +1,3 @@
+The templates of Prolog queries are as follows:
+{predicates}
+For each and every sentence of the following reasoning, if a given sentence refers to {short_description}, translate that sentence into the appropriate query. Pay attention to negations and counterfactuals. Surround each and every query with its own curly braces. Note that the reasoning may be erroneous, and some sentences may be contradictory, resulting in contradictory queries.
