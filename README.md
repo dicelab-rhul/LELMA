@@ -76,4 +76,51 @@ To adapt the framework for the use in other domains, the following steps are nee
 
 ## Evaluation
 
-TODO
+The framework was evaluated using two LLMs, GPT-4 Omni and Gemini 1.0 Pro. The models were prompted to reason and choose an action in one-shot games: [Prisoner's Dillema](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma) (PD), [Stag Hunt](https://en.wikipedia.org/wiki/Stag_hunt) (SH), and [Hawk-Dove](https://en.wikipedia.org/wiki/Chicken_(game)) (HD). The payoff matrices were as follows:
+
+*Prisoner's Dilemma*
+| **P1/P2**       | **Betray (R)** | **Confess (B)** |
+|-----------------|----------------|-----------------|
+| **Betray (R)**  | (1, 1)         | (5, 0)          |
+| **Confess (B)** | (0, 5)         | (3, 3)          |
+
+*Stag Hunt*
+| **P1/P2**       | **Hare (R)** | **Stag (B)** |
+|-----------------|--------------|--------------|
+| **Hare (R)**    | (1, 1)       | (3, 0)       |
+| **Stag (B)**    | (0, 3)       | (5, 5)       |
+
+*Hawk-Dove*
+| **P1/P2**       | **Hawk (R)** | **Dove (B)** |
+|-----------------|--------------|--------------|
+| **Hawk (R)**    | (0, 0)       | (5, 1)       |
+| **Dove (B)**    | (1, 5)       | (3, 3)       |
+
+Each model had at most five reasoning attempts in the feedback loop. Each game was repeated 30 times. The rules of the game were presented in the prompt in natural language. The name of the game was not given, and the action names were substituted with 'B' and 'R' to make the task more challenging. To assess the effectiveness of the framework in detecting and correcting reasoning errors, each reasoning sample was later manually evaluated by three independent evaluators.The evaluation protocol is available [here](assets/Evaluation_protocol.pdf), the logs from the experiment [here](assets/RESULTS/experiment_logs), and the aaggreagated evaluations [here](assets/RESULTS/evaluation_aggregated).
+
+### Choice distribution
+
+<p align="center">
+  <img src="assets/choices_dist_gpt4.png" alt="Choices GPT4" width="45%" />
+  <img src="assets/choices_dist_gemini.png" alt="Choices Gemini" width="45%" />
+</p>
+
+After the correction of reasoning errors, especially for GPT-4 Omni, the risk-averse choices are more prevalent.
+
+### Reasoning correctness
+
+<p align="center">
+  <img src="assets/correctness_plot_gpt4.png" alt="Correctness GPT4" width="45%" />
+  <img src="assets/correctness_plot_gemini.png" alt="Correctness Gemini" width="45%" />
+</p>
+
+Reasoning correctness, according to the criteria specified in the [evaluation protocol](assets/Evaluation_protocol.pdf), increases in the final reasoning attempt, in particular for GPT-4 Omni which is able to effectively use the corrective feedback. 
+
+### Confusion matrix
+
+<p align="center">
+  <img src="assets/con_mat_games_gpt4.png" alt="Conf mat GPT4" width="45%" />
+  <img src="assets/correctness_plot_gemini.png" alt="Conf mat Gemini" width="45%" />
+</p>
+
+The confusion matrix for the first reasoning attempt, based on the actual correctness (determined by human evaluators) and predicted correctness (determined based on the absence of failed predicates), shows high error detection accuracy.
