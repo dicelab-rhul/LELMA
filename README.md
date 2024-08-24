@@ -96,7 +96,7 @@ The framework was evaluated using two LLMs, GPT-4 Omni and Gemini 1.0 Pro. The m
 | **Hawk (R)**    | (0, 0)       | (5, 1)       |
 | **Dove (B)**    | (1, 5)       | (3, 3)       |
 
-Each model had at most five reasoning attempts in the feedback loop. Each game was repeated 30 times. The rules of the game were presented in the prompt in natural language. The name of the game was not given, and the action names were substituted with 'B' and 'R' to make the task more challenging. To assess the effectiveness of the framework in detecting and correcting reasoning errors, each reasoning sample was later manually evaluated by three independent evaluators.The evaluation protocol is available [here](assets/Evaluation_protocol.pdf), the logs from the experiment [here](assets/RESULTS/experiment_logs), and the aaggreagated evaluations [here](assets/RESULTS/evaluation_aggregated).
+Each model had at most five reasoning attempts in the feedback loop. Each game was repeated 30 times. The rules of the game were presented in the prompt in natural language. The name of the game was not given, and the action names were substituted with 'B' and 'R' to make the task more challenging. To assess the effectiveness of the framework in detecting and correcting reasoning errors, each reasoning sample was later manually evaluated by three independent evaluators.The evaluation protocol is available [here](assets/Evaluation_protocol.pdf), the logs from the experiment [here](assets/RESULTS/experiment_logs), and the aggreagated evaluations [here](assets/RESULTS/evaluation_aggregated).
 
 ### Choice distribution
 
@@ -105,7 +105,7 @@ Each model had at most five reasoning attempts in the feedback loop. Each game w
   <img src="assets/choices_dist_gemini.png" alt="Choices Gemini" width="45%" />
 </p>
 
-After the correction of reasoning errors, especially for GPT-4 Omni, the risk-averse choices are more prevalent.
+After the correction of reasoning errors, especially for GPT-4 Omni, the risk-averse choices are more prevalent in the final reasoning attempt in comparison to the original attempt.
 
 ### Reasoning correctness
 
@@ -119,8 +119,8 @@ Reasoning correctness, according to the criteria specified in the [evaluation pr
 ### Confusion matrix
 
 <p align="center">
-  <img src="assets/con_mat_games_gpt4.png" alt="Conf mat GPT4" width="45%" />
-  <img src="assets/correctness_plot_gemini.png" alt="Conf mat Gemini" width="45%" />
+  <img src="assets/con_mat_games_gpt4.png" alt="Conf mat GPT4" width="45%" style="margin-right: 40px;"/>
+  <img src="assets/con_mat_games_gemini.png" alt="Conf mat Gemini" width="45%" style="margin-left: 40px;"/>
 </p>
 
 The confusion matrix for the first reasoning attempt, based on the actual correctness (determined by human evaluators) and predicted correctness (determined based on the absence of failed predicates), shows high error detection accuracy.
