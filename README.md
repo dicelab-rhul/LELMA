@@ -53,7 +53,7 @@ The structure of the project is as follows:
 ├── experiment.py
 └── solver.pl
 ```
-[base](src/base) directory contains abstract classess that need to be implemented to adapt the framework for a specific use-case ([base_prompt_maker.py](src/base/base_prompt_maker.py)) and to use a specific LLM ([base_llm.py](src/base/base_llm.py)). [DATA](DATA) directory contains configuration data an the templates for prompts and predicates. 
+[base](src/base) directory contains abstract classes that need to be implemented to adapt the framework for a specific use-case ([base_prompt_maker.py](src/base/base_prompt_maker.py)) or to use a specific LLM ([base_llm.py](src/base/base_llm.py)). [DATA](DATA) directory contains configuration data and the templates for prompts and predicates.
 
 ## Adaptations
 
