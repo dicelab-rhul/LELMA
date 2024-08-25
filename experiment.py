@@ -1,5 +1,4 @@
 import random
-import time
 import configparser
 import os
 import logging
@@ -44,15 +43,6 @@ def main():
 	# Read instruction prompt from files
 	instruction_prompts_fnames = config.get("Prompts", "instruction").split(";")
 
-	# Log file for tokens and time
-	tokens_log_path = os.path.join('OUTPUT', "token_count.csv")
-
-	# Check if the tokens log file already exists
-	if not os.path.exists(tokens_log_path):
-		# Create the file without writing any content
-		with open(tokens_log_path, "w") as f_log:
-			f_log.write("file_name;instr_tokens;gen_tokens;time\n")
-
 	# Main experimental loop
 	# For each LLM-reasoner
 	for reasoner in reasoners:
@@ -76,18 +66,7 @@ def main():
 											 f"{reasoner.get_name()}_{game_type}_{prompt_file[:-4]}_{payoff_matrix['UL'][0]}_{payoff_matrix['UR'][0]}_{payoff_matrix['DL'][0]}_{payoff_matrix['DR'][0]}_{rep}_{random.randint(1000, 9999)}.txt")
 
 						try:  # We don't want to break the loop
-							reasoner.clear_token_count()
-							llm_translator.clear_token_count()
-							start_time = time.time()
 							lelma.reason(payoff_matrix_file, prompt, fout_name)
-							end_time = time.time()
-
-							instruction_tokens = lelma.reasoner.instruction_tokens + lelma.translator.instruction_tokens
-							generated_tokes = lelma.reasoner.generated_tokens + lelma.translator.generated_tokens
-							total_time = end_time-start_time
-
-							with open(tokens_log_path, 'a') as log:
-								log.write(";".join([fout_name, str(instruction_tokens), str(generated_tokes), str(total_time)])+'\n')
 
 						except Exception as error:
 							logger.exception(error)
