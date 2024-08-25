@@ -1,7 +1,7 @@
 /*
 	Game description framework 
-	author: Anonym
-	contributor: Anonym 2
+	author: Kostas Stathis
+	contributor: Agnieszka Mensfelt
 	SWI-Prolog version
 	Last update: 06/08/2024
 */
