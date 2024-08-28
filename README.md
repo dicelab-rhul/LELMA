@@ -29,7 +29,7 @@ To run the sample experiment, use the following command in your terminal:
 ```bash
 python experiment.py
 ```
-You can modify the parameters of the experiment by modifying [full_experiment.ini](DATA/CONFIG/full_experiment.ini). To use GPT-4 and Gemini, used by default in the experiment, the respective API keys has to be stored in environment variables.  
+You can modify the parameters of the experiment by modifying [full_experiment.ini](DATA/CONFIG/full_experiment.ini). To use GPT-4 and Gemini, used by default in the experiment, the respective API keys have to be stored in environment variables.  
 
 ## Project structure
 
