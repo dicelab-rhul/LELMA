@@ -24,6 +24,8 @@ The general overview of the architecture is shown below.
 
 ## Usage
 
+The framework requires [SWI-Prolog](https://www.swi-prolog.org/) to be [installed](https://wwu-pi.github.io/tutorials/lectures/lsp/010_install_swi_prolog.html).
+
 To run the sample experiment, use the following command in your terminal:
 
 ```bash
