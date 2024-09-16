@@ -137,13 +137,10 @@ The confusion matrix for the first reasoning attempt, based on the actual correc
 ## Citing This Work
 
 ```bibtex
-@misc{mensfelt2024lelma,
+@article{mensfelt2024lelma,
       title={Logic-Enhanced Language Model Agents for Trustworthy Social Simulations}, 
       author={Agnieszka Mensfelt and Kostas Stathis and Vince Trencsenyi},
       year={2024},
-      eprint={2408.16081},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2408.16081}, 
+      journal={arXiv preprint arXiv:2408.16081} 
 }
 ```
