@@ -143,11 +143,16 @@ Vince Trencsenyi
 ## Citing This Work
 
 ```bibtex
-@article{mensfelt2024lelma,
-      title={Logic-Enhanced Language Model Agents for Trustworthy Social Simulations}, 
-      author={Agnieszka Mensfelt and Kostas Stathis and Vince Trencsenyi},
-      year={2024},
-      journal={arXiv preprint arXiv:2408.16081},
-      url={https://arxiv.org/abs/2408.16081} 
+@inproceedings{mensfelt2025lelma,
+title = "Towards Logically Sound Natural Language Reasoning with Logic-Enhanced Language Model Agents",
+author = "Agnieszka Mensfelt and Kostas Stathis and Vince Trencsenyi",
+year = "2025",
+month = dec,
+day = "15",
+doi = "10.1109/ICTAI66417.2025.00122",
+isbn = "979-8-3315-4920-6",
+pages = "838--842",
+booktitle = "Proceedings of the 2025 IEEE 37th International Conference on Tools with Artificial Intelligence",
+publisher = "IEEE Computer Society"
 }
 ```
